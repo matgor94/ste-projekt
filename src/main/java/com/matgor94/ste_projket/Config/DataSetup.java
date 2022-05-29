@@ -22,10 +22,10 @@ public class DataSetup {
     @EventListener
     public void loadData(ContextRefreshedEvent contextRefreshedEvent){
         if(!atomicBoolean.getAndSet(true)){
-            User user = new User(null, "94070900444", "Mateusz", "Górczyński", "123456789", "Baboszewo 50");
+            User user = new User(null, "94070900444", "Mateusz", "Górczyński", "maly316@vp.pl", "123456789", "Baboszewo 50", "haslo123", "ROLE_USER");
             userRepository.save(user);
 
-            User user1 = new User(null, "85121218957", "Jan", "Kowalski", "758963254", "Płock, Płońska 30");
+            User user1 = new User(null, "85121218957", "Jan", "Kowalski", "jankowlaski@wp.pl","758963254", "Płock, Płońska 30", "qwerty123", "ROLE_USER");
             userRepository.save(user1);
         }
     }

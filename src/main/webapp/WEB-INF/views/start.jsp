@@ -4,7 +4,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html lang="pl">
 <head>
-    <title>Strona logowania</title>
+    <title>AHE Bank</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -87,7 +87,13 @@
 <body>
 <div class="sidenav">
     <div class="login-main-text">
-        <h2>AHE Bank<br> Strona startowa</h2>
+        <h2>AHE Bank<br></h2>
+    </div>
+</div>
+<div class="main">
+    <div class="col-md-6 col-sm-12">
+        <h3>Jesteś klientem banku? Zaloguj się<br> <a href="/login" class="btn btn-black">Zaloguj</a></h3>
+        <h3>Chcesz założyć konto? Zarejestruj się<br> <a href="/registration" class="btn btn-black">Zarejestruj</a></h3>
     </div>
 </div>
 </body>

@@ -28,10 +28,17 @@ public class User {
     @NotBlank @NotNull @Size(min=3) @Column(name = "last_name")
     private String lastName;
 
+    @NotNull @NotBlank
+    private String email;
+
     @NotNull @NotBlank @Column(name = "phone_number") @Size(min = 9)
     private String phoneNumber;
 
     @NotBlank @NotNull
     private String addres;
 
+    @NotNull @NotBlank
+    private String password;
+
+    private String role;
 }
