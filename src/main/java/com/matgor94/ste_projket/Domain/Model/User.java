@@ -7,6 +7,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.math.BigDecimal;
 
 @Entity(name = "user")
 @Setter
@@ -40,5 +41,6 @@ public class User {
     @NotNull @NotBlank
     private String password;
 
+    private double saldo;
     private String role;
 }
