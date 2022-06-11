@@ -87,14 +87,23 @@
 <body>
 <div class="sidenav">
     <div class="login-main-text">
-        <h2>AHE Bank<br></h2>
+        <h2>Potwierdzenie przelewu<br></h2>
     </div>
 </div>
 <div class="main">
     <div class="col-md-6 col-sm-12">
-       <h2>Witaj ${user.firstName}. Twój stan konta to: ${user.saldo}</h2>
-            <h3><br> <a href="/przelew" class="btn btn-black">Przelew</a></h3>
-</div>
+        Potwierdzenie przelewu:<br>
+        <b>Nadawca:<br></b>
+        ${nadawca}<br>
+
+        <b>Odbiorca:</b><br>
+        ${adresat}<br>
+
+        <b>Przelewasz:</b> ${ile}<br>
+
+        <b>Saldo po transakcji</b>
+        ${saldoNowe}
+    </div>
 </div>
 </body>
 </html>

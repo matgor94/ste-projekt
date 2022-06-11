@@ -1,20 +1,17 @@
 package com.matgor94.ste_projket.Domain.Model;
 
 import lombok.*;
-import org.hibernate.validator.constraints.pl.PESEL;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import java.math.BigDecimal;
 
 @Entity(name = "user")
 @Setter
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

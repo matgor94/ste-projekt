@@ -4,7 +4,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html lang="pl">
 <head>
-    <title>AHE Bank</title>
+    <title>AHE Bank - Przelew</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -87,14 +87,22 @@
 <body>
 <div class="sidenav">
     <div class="login-main-text">
-        <h2>AHE Bank<br></h2>
+        <h2>Wyokonaj przelew<br></h2>
     </div>
 </div>
 <div class="main">
     <div class="col-md-6 col-sm-12">
-       <h2>Witaj ${user.firstName}. Twój stan konta to: ${user.saldo}</h2>
-            <h3><br> <a href="/przelew" class="btn btn-black">Przelew</a></h3>
-</div>
+        <div class="login-form">
+        <h4>${user.firstName} ${user.lastName}</h4>
+        <form action="/przelew" method="post">
+            Kwota przelewu: minimum 0.01 zł, maksimum ${user.saldo}<br>
+            <input type="text" name="kwotaPrzelewu"><br>
+            Podaj numer telefonu skojrzony z włascicielem konta.
+            <input type="text" name="komu">
+            <input type="submit" value="Wyślij">
+        </form>
+        </div>
+    </div>
 </div>
 </body>
 </html>

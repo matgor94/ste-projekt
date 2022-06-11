@@ -87,14 +87,15 @@
 <body>
 <div class="sidenav">
     <div class="login-main-text">
-        <h2>AHE Bank<br></h2>
+        <h2>ERROR!!!<br></h2>
     </div>
 </div>
 <div class="main">
-    <div class="col-md-6 col-sm-12">
-       <h2>Witaj ${user.firstName}. Twój stan konta to: ${user.saldo}</h2>
-            <h3><br> <a href="/przelew" class="btn btn-black">Przelew</a></h3>
-</div>
+        <p style="display: flex">
+        <h3>Podałeś błędne dane do przelewu! <br> Kwota przekracza saldo Twojeg konta lub jest zbyt niska lub brak klienta banku o takim id</h3>
+        <h3>Powrót na strone konta<a href="/user/saldo" class="btn btn-black">Powrót</a></h3>
+    </p>
+
 </div>
 </body>
 </html>

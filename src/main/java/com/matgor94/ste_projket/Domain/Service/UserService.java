@@ -28,19 +28,20 @@ public class UserService {
         this.passwordEncoder = passwordEncoder;
     }
 
+
     public User addUser(User user){
         String passwordEncoded = passwordEncoder.encode(user.getPassword());
         user.setPassword(passwordEncoded);
         return userRepository.save(user);
     }
+
     public User getUser(Long id){
-        return userRepository.getById(id);
+        return entityManager.find(User.class, id);
     }
 
     public List<User> getListOfUsers(){
         return userRepository.findAll();
     }
-
     public User editUser(User user){
         return entityManager.merge(user);
     }
